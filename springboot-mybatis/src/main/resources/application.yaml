@@ -1,0 +1,36 @@
+spring:
+  # 数据源配置（适配 MySQL 8.x）
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接 URL：指定数据库名、编码、SSL 配置等
+    url: jdbc:mysql://localhost:3306/mall?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    #url: jdbc:mysql://120.55.50.193:3306/mall?useSSL=false&serverTimezone=Asia/Shanghai
+    username: root # 数据库用户名（替换为你的 MySQL 用户名）
+    password: 123456 # 数据库密码（替换为你的 MySQL 密码）
+    # select * from user   List<User>
+  #redis
+  data:
+    redis:
+      host: 127.0.0.1 #请求地址 /localhost
+      port: 6379   #端口
+      password: "123456" #Redis密码
+  redis:
+    host: 127.0.0.1 #请求地址 /localhost
+    port: 6379   #端口
+    password: "123456" #Redis密码
+mybatis:
+  type-aliases-package: com.mybatis.pojo # 实体类别名包（简化 XML 中 resultType 配置）
+  configuration:
+    # 指定 MyBatis 使用 SLF4J 日志（SpringBoot 默认日志框架）
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    map-underscore-to-camel-case: true # 启用驼峰映射
+logging:
+  # 日志输出到文件
+  file:
+    name: logs/app.log  # 日志会存在项目根目录的 logs/app.log
+  # 日志级别（必须有这个才能看到SQL）
+  level:
+    com.mybatis.mapper: debug  # 关键！打开SQL日志
+    root: info
+
+

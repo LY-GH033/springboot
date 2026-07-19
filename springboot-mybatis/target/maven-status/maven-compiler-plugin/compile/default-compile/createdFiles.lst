@@ -1,0 +1,6 @@
+com\mybatis\mapper\UserMapper.class
+com\mybatis\service\UserServicelmpl.class
+com\mybatis\pojo\User.class
+com\mybatis\controller\UserController.class
+com\mybatis\service\UserService.class
+com\mybatis\Application.class
