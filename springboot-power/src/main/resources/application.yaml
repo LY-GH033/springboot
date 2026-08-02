@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/power?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
-    username: root
-    password: 123456
+    url: jdbc:mysql://mysql7.sqlpub.com:3312/lylyly_database?useSSL=false&serverTimezone=UTC&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: lylyly
+    password: TGDZqI02zkUBqSoV
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
