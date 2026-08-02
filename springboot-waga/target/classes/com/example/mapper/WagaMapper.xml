@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.WagaMapper">
+
+    <select id="getByWagaCode" resultType="Waga">
+        select * from gate_monitor where WAGA_CODE = #{waga_code}
+    </select>
+
+    <select id="getAll" resultType="Waga">
+        select * from gate_monitor
+    </select>
+
+    <insert id="insert">
+        insert into gate_monitor(WAGA_CODE,USWL,DSWL,TTFL,NOTE,UPDATE_DATE) VALUES ( #{wagaCode}, #{uswl}, #{dswl}, #{ttfl}, #{note}, #{updateDate} )
+    </insert>
+
+    <update id="update">
+        update gate_monitor set USWL = #{uswl},DSWL = #{dswl},TTFL = #{ttfl},NOTE = #{note},UPDATE_DATE = #{updateDate} where WAGA_CODE = #{wagaCode}
+    </update>
+
+    <delete id="deleteByWagaCode">
+        delete from gate_monitor where WAGA_CODE = #{wagaCode}
+    </delete>
+
+
+</mapper>
